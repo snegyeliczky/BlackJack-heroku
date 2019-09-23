@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>BlackJack</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css' )}}">
-        <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
-    </head>
-    <body>
-        <h1>Hello BlackJack!</h1>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>BlackJack</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css' ) }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="../static/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../static/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+<div id="main-container">
+    <h1>BlackJack</h1>
+    <p>Choose a deck:</p>
+    <div id="choices">
+        <div>
+            <label for="deck-classic">CLASSIC</label>
+            <label for="deck-art">ART</label>
+            <label for="deck-gladiator">GLADIATOR</label>
+        </div>
+        <div>
+            <input type="radio" id="deck-classic" name="deck" value="classic" checked>
+            <input type="radio" id="deck-art" name="deck" value="art">
+            <input type="radio" id="deck-gladiator" name="deck" value="gladiator">
+        </div>
+    </div>
+    <button id="start-btn">Play</button>
+</div>
+</body>
 </html>
